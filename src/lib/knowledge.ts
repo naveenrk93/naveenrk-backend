@@ -154,39 +154,60 @@ export const knowledgeDocs: Document[] = [
   }),
 
   // ============================================================
-  // SKILLS (one chunk per category for clean retrieval)
+  // SKILLS — chunks mirror the six categories rendered in the
+  // portfolio's Skills section (`section #03`), so when a recruiter
+  // asks "what's his testing stack?" or "what's in his AI stack?"
+  // retrieval returns the exact list shown on the page.
+  //
+  //   1. languages & frameworks
+  //   2. frontend craft & data
+  //   3. architecture & patterns
+  //   4. ai · rag · llms
+  //   5. testing & quality
+  //   6. infra · cloud · observability
+  //
+  // Plus depth chunks for backend APIs, performance wins, and build
+  // tooling that aren't surfaced as their own panel on the site.
   // ============================================================
   new Document({
-    pageContent: `Programming languages Naveen works with day-to-day: TypeScript (primary), JavaScript, and Python. TypeScript is his daily driver across all production frontend and Node.js work. Python comes from his DeepLearning.AI / Stanford ML coursework (which is Python-based) and supports his AI/RAG exploration. All three are listed in the "primary stack" section of his portfolio.`,
-    metadata: { source: "skills-languages" },
+    pageContent: `Languages & frameworks Naveen ships in production (panel 1 of 6 in his portfolio's Skills section): TypeScript (primary, daily driver across all frontend and Node.js work), JavaScript, Python (backs his DeepLearning.AI / Stanford ML coursework and his AI/RAG exploration), React, Next.js, and Node.js. React + Next.js is his core UI stack and has been across Prendio, ZoomInfo, Kuvera, and PayPal.`,
+    metadata: { source: "skills-languages-frameworks" },
   }),
   new Document({
-    pageContent: `Frontend skills: React 18, Next.js, TypeScript, Redux, Swagger, Storybook. Naveen has deep, production-grade experience with all of these, having shipped multiple component libraries and micro-frontends used by enterprise teams.`,
-    metadata: { source: "skills-frontend" },
+    pageContent: `Frontend craft & data layer Naveen works with (panel 2 of 6): Tailwind CSS, Chakra UI, Storybook, Redux, Zustand, React Query (TanStack Query), GraphQL, tRPC, WebSockets, and accessibility (a11y · WCAG AA). Production proof: Chakra UI powers the Prendio frontend; Storybook drives both the Prendio Design System and the ZoomInfo React component library; React Query + react-window cut re-renders by 70% at Prendio; WebSockets via Pusher.js powered ZoomInfo Chat (where Naveen drove an 80% reduction in transmission overhead). As UI Governance Lead at Prendio he is the org-wide owner of WCAG AA compliance.`,
+    metadata: { source: "skills-frontend-craft-data" },
   }),
   new Document({
-    pageContent: `AI / Machine Learning skills: LangChain, LangGraph, LangSmith, Claude (and Claude Code), Cursor, RAG systems, ElevenLabs. Naveen builds production RAG applications and uses agentic frameworks to ship intelligent product interfaces.`,
-    metadata: { source: "skills-ai" },
+    pageContent: `Architecture & patterns Naveen practices and has shipped (panel 3 of 6): Micro-frontends, Module Federation, Design Systems, Component-Driven Development, REST API design, and React Profiler-driven performance work. Production proof: he led ZoomInfo's monolith → micro-frontend migration on Module Federation, authored both the Prendio Design System and the ZoomInfo React component library, and is currently UI Governance Lead at Prendio. This is the category that earns the "Architect" in his title.`,
+    metadata: { source: "skills-architecture-patterns" },
   }),
   new Document({
-    pageContent: `Performance engineering skills: Lighthouse, Web Vitals, React Profiler, compression & minification, virtualization techniques like react-window. He has measurable wins here — 70% reduction in re-renders at Prendio and 80% reduction in socket data overhead at ZoomInfo.`,
+    pageContent: `AI · RAG · LLMs stack Naveen ships with (panel 4 of 6): LangChain, LangGraph, LangSmith, Claude (Anthropic), Gemini (Google), Pinecone, pgvector, and prompt engineering. Production proof: he built the Prendio RAG procurement assistant on LangChain + LangGraph (~50% support deflection in production), uses Claude and Cursor daily for AI-assisted development, and built this very portfolio chatbot ("Anti-Mage") on LangChain + Gemini with retrieval over his resume and bio. He's hands-on with both managed (Pinecone) and self-hosted (pgvector) vector stores.`,
+    metadata: { source: "skills-ai-rag-llms" },
+  }),
+  new Document({
+    pageContent: `Testing & quality stack Naveen uses (panel 5 of 6): Vitest, Playwright, Cypress, Testing Library, Google Lighthouse, and Web Vitals. Vitest for unit and component tests, Playwright and Cypress for end-to-end testing, Testing Library for user-centric component testing, Lighthouse + Web Vitals for production performance monitoring. He treats testing as a craft — a habit he formed orchestrating both unit and functional testing for the entire product at Kuvera.`,
+    metadata: { source: "skills-testing-quality" },
+  }),
+  new Document({
+    pageContent: `Infra · cloud · observability stack (panel 6 of 6): Docker, AWS (EC2, S3, CloudFormation), Vercel, GitHub Actions, Datadog, and Sentry. AWS dates back to PayPal where he hosted Node.js / Express services on EC2; Vercel is his modern hosting choice for Next.js apps; Docker for containerization; GitHub Actions for CI/CD pipelines; Datadog and Sentry for production monitoring and error tracking. He has also worked with GCP and Kubernetes in past stacks.`,
+    metadata: { source: "skills-infra-cloud-observability" },
+  }),
+  new Document({
+    pageContent: `Performance engineering — Naveen's strongest measurable wins: 70% reduction in unnecessary re-renders at Prendio (using react-window virtualization paired with React Query), and an 80% reduction in WebSocket transmission overhead at ZoomInfo (~$5,000/month in saved infrastructure cost). His performance toolbox: React Profiler, Google Lighthouse, Web Vitals, virtualization (react-window), compression, minification, and profiler-driven re-render hunting.`,
     metadata: { source: "skills-performance" },
   }),
   new Document({
-    pageContent: `Tooling and CI/CD: Vite, Webpack, Vitest, Jest, ESLint, Prettier, GitLab CI/CD, CircleCI. Naveen owns developer experience and automation pipelines for fast, reliable shipping.`,
-    metadata: { source: "skills-tooling" },
-  }),
-  new Document({
-    pageContent: `Backend & APIs skills: Node.js, Express, Hapi, Koa, REST API design and integration. He has shipped backend services in production at PayPal, Kuvera, and Prendio.`,
+    pageContent: `Backend & APIs (depth chunk, not its own panel on the site): Node.js, Express, Hapi, Koa, REST API design and integration, plus GraphQL and tRPC where teams use them. He has shipped backend services in production at PayPal (Node.js + Express on AWS EC2), Kuvera (full-stack), and Prendio. The frontend craft & data category lists his data-layer choices; this chunk covers the server side.`,
     metadata: { source: "skills-backend" },
   }),
   new Document({
-    pageContent: `Cloud & DevOps skills: AWS (EC2, S3, CloudFormation), GCP, Docker, Kubernetes. He has hands-on experience hosting and securing services on Amazon EC2 dating back to his PayPal years.`,
-    metadata: { source: "skills-cloud" },
+    pageContent: `Build & dev tooling (depth chunk, not its own panel on the site): Vite, Webpack, ESLint, Prettier, npm/pnpm. He owns developer experience — from build configuration to lint and formatter setup — to keep teams shipping fast without breaking conventions. Has historical experience with GitLab CI/CD and CircleCI; currently uses GitHub Actions (listed under infra · cloud · observability).`,
+    metadata: { source: "skills-build-tooling" },
   }),
   new Document({
-    pageContent: `Architecture & specialty skills: Design Systems, Micro-frontends, UI Governance, Accessibility (ARIA / WCAG 2.1). Naveen has formally held the UI Governance Lead role at Prendio and has built design systems at both Prendio and ZoomInfo.`,
-    metadata: { source: "skills-architecture" },
+    pageContent: `How Naveen organizes his stack on his portfolio (the Skills section / section 03): six categorized panels arranged in a 3×2 grid that read left-to-right as a story — what I write (languages & frameworks) → how I build UI (frontend craft & data) → how I structure systems (architecture & patterns) → how I add intelligence (ai · rag · llms) → how I ensure quality (testing & quality) → how I deploy and monitor (infra · cloud · observability). The architecture panel is intentionally top-right — it's his strongest differentiator and what earns the "Architect" in his title.`,
+    metadata: { source: "skills-organization" },
   }),
 
   // ============================================================
@@ -213,8 +234,16 @@ export const knowledgeDocs: Document[] = [
   // PORTFOLIO SITE (meta — about the site itself)
   // ============================================================
   new Document({
-    pageContent: `About Naveen's portfolio site (the site this chatbot lives on): built with React 19, TanStack Start, and Framer Motion. Design language is a neon-on-dark "terminal" aesthetic. The chat assistant is called "Anti-Mage" — Naveen's tongue-in-cheek joke that he's allergic to "it's just magic" answers; every system in his world is real, readable engineering. (It's also a nod to the Dota 2 hero of the same name, for anyone who catches it.) Anti-Mage is powered by LangChain + Gemini, doing RAG (retrieval-augmented generation) over Naveen's resume, portfolio, and bio. Naveen built Anti-Mage himself as a live demo of the AI engineering work he does professionally.`,
+    pageContent: `About Naveen's portfolio site (the site this chatbot lives on): built with React 19, TanStack Start, and Framer Motion, styled with Tailwind CSS. Design language is a neon-on-dark "terminal" aesthetic with a typewriter boot intro, monospace terminal prompts, and snap-scroll one-section-per-viewport navigation. The chat assistant is called "Anti-Mage" — Naveen's tongue-in-cheek joke that he's allergic to "it's just magic" answers; every system in his world is real, readable engineering. (It's also a nod to the Dota 2 hero of the same name, for anyone who catches it.) Anti-Mage is powered by LangChain + Google Gemini, doing RAG (retrieval-augmented generation) over Naveen's resume, portfolio, and bio. Naveen built Anti-Mage himself as a live demo of the AI engineering work he does professionally.`,
     metadata: { source: "portfolio-site" },
+  }),
+  new Document({
+    pageContent: `Portfolio site sections in order: 01 About (summary, four pillars: Craft & Architecture, AI-Native Product, Performance, Velocity), 02 Work (career timeline: Prendio, ZoomInfo, Kuvera, PayPal), 03 Skills (six categorized panels — see the skills-organization chunk for the breakdown), 04 Education (Northeastern MS + NIT Trichy BTech + DeepLearning.AI / Stanford coursework), 05 Awards (Prendio Developer Kudos and ZoomInfo Developer of the Month), 06 Projects (Prendio RAG Assistant, Prendio Design System, ZI Component Library, Micro-frontend Platform), 07 Contact (email, phone, GitHub, LinkedIn, resume PDF, faux terminal session).`,
+    metadata: { source: "portfolio-sections" },
+  }),
+  new Document({
+    pageContent: `Brand icons on the portfolio Skills section come from local SVG files bundled at build time (under src/assets/icons/) rather than a runtime CDN — no external network calls, ~12 KB gzipped total, all icons fingerprinted and cached from the same origin as the site. This is one of the small performance touches that reflects how Naveen thinks about frontend performance everywhere.`,
+    metadata: { source: "portfolio-icons-perf" },
   }),
 
   // ============================================================
