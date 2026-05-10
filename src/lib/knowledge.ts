@@ -21,11 +21,11 @@ export const knowledgeDocs: Document[] = [
   // IDENTITY & CONTACT
   // ============================================================
   new Document({
-    pageContent: `Naveen Ramkumar Varadarajan (also goes by Naveen R.K. or just Naveen) is a Senior AI-enabled Frontend Architect with 8+ years of professional experience shipping production software. He is currently based in Chennai, India. Best ways to reach him: LinkedIn (https://www.linkedin.com/in/naveenramkumar-varadarajan-542001116/), email naveenrk93@gmail.com, or phone +91 95000 66155.`,
+    pageContent: `Naveen Ramkumar Varadarajan (also goes by Naveen R.K. or just Naveen) is a Senior AI-enabled Frontend Architect with 8+ years of professional experience shipping production software. He is currently based in Chennai, India. Best ways to reach him: LinkedIn (https://www.linkedin.com/in/naveenrk93/), email naveenrk93@gmail.com, or phone +91 95000 66155.`,
     metadata: { source: "identity" },
   }),
   new Document({
-    pageContent: `Connect with Naveen on LinkedIn: https://www.linkedin.com/in/naveenramkumar-varadarajan-542001116/ — this is the best channel for new opportunities, recruiter outreach, or to start a conversation. He typically replies within a day.`,
+    pageContent: `Connect with Naveen on LinkedIn: https://www.linkedin.com/in/naveenrk93/ — this is the best channel for new opportunities, recruiter outreach, or to start a conversation. He typically replies within a day.`,
     metadata: { source: "contact-linkedin" },
   }),
   new Document({
@@ -33,7 +33,7 @@ export const knowledgeDocs: Document[] = [
     metadata: { source: "contact-github" },
   }),
   new Document({
-    pageContent: `Availability: Naveen is currently open to senior and staff Frontend / Frontend Architect roles. He usually replies to outreach within a day. Best contact: LinkedIn (https://www.linkedin.com/in/naveenramkumar-varadarajan-542001116/) or email naveenrk93@gmail.com.`,
+    pageContent: `Availability: Naveen is currently open to senior and staff Frontend / Frontend Architect roles. He usually replies to outreach within a day. Best contact: LinkedIn (https://www.linkedin.com/in/naveenrk93/) or email naveenrk93@gmail.com.`,
     metadata: { source: "availability" },
   }),
   new Document({
