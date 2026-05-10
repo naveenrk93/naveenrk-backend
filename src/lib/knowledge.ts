@@ -157,6 +157,10 @@ export const knowledgeDocs: Document[] = [
   // SKILLS (one chunk per category for clean retrieval)
   // ============================================================
   new Document({
+    pageContent: `Programming languages Naveen works with day-to-day: TypeScript (primary), JavaScript, and Python. TypeScript is his daily driver across all production frontend and Node.js work. Python comes from his DeepLearning.AI / Stanford ML coursework (which is Python-based) and supports his AI/RAG exploration. All three are listed in the "primary stack" section of his portfolio.`,
+    metadata: { source: "skills-languages" },
+  }),
+  new Document({
     pageContent: `Frontend skills: React 18, Next.js, TypeScript, Redux, Swagger, Storybook. Naveen has deep, production-grade experience with all of these, having shipped multiple component libraries and micro-frontends used by enterprise teams.`,
     metadata: { source: "skills-frontend" },
   }),
@@ -209,7 +213,7 @@ export const knowledgeDocs: Document[] = [
   // PORTFOLIO SITE (meta — about the site itself)
   // ============================================================
   new Document({
-    pageContent: `About Naveen's portfolio site (the site this chatbot lives on): built with React 19, TanStack Start, and Framer Motion. Design language is a neon-on-dark "terminal" aesthetic. The chat assistant is called "naveen-bot" and is powered by LangChain + Gemini, doing RAG over Naveen's resume and bio.`,
+    pageContent: `About Naveen's portfolio site (the site this chatbot lives on): built with React 19, TanStack Start, and Framer Motion. Design language is a neon-on-dark "terminal" aesthetic. The chat assistant is called "Anti-Mage" — Naveen's tongue-in-cheek joke that he's allergic to "it's just magic" answers; every system in his world is real, readable engineering. (It's also a nod to the Dota 2 hero of the same name, for anyone who catches it.) Anti-Mage is powered by LangChain + Gemini, doing RAG (retrieval-augmented generation) over Naveen's resume, portfolio, and bio. Naveen built Anti-Mage himself as a live demo of the AI engineering work he does professionally.`,
     metadata: { source: "portfolio-site" },
   }),
 
